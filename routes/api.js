@@ -93,8 +93,8 @@ limit: 'unlimited'
 			res.json(loghandler.apikey)
 			}
 })
-// cecan
-router.get('/cecan/china', async (req, res, next) => {
+// random
+router.get('/random/china', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.noapikey)
         if(listkey.includes(apikey)){
@@ -113,7 +113,26 @@ router.get('/cecan/china', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/cecan/vietnam', async (req, res, next) => {
+router.get('/random/loli', async (req, res, next) => {
+  var apikey = req.query.apikey
+ if(!apikey) return res.json(loghandler.noapikey)
+if(listkey.includes(apikey)){
+ var data =[""]
+ var result = data[Math.floor(Math.random() * data.length)];
+ var requestSettings = {
+url: result,
+method: 'GET',
+encoding: null
+};
+request(requestSettings, function(error, response, body) {
+res.set('Content-Type', 'image/png');
+res.send(body);
+});
+} else {
+res.json(loghandler.apikey)
+}
+})
+router.get('/random/vietnam', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.noapikey)
         if(listkey.includes(apikey)){
@@ -132,7 +151,7 @@ router.get('/cecan/vietnam', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/cecan/thailand', async (req, res, next) => {
+router.get('/random/thailand', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.noapikey)
         if(listkey.includes(apikey)){
@@ -151,7 +170,7 @@ router.get('/cecan/thailand', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/cecan/indonesia', async (req, res, next) => {
+router.get('/random/indonesia', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.noapikey)
         if(listkey.includes(apikey)){
@@ -170,7 +189,7 @@ router.get('/cecan/indonesia', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/cecan/korea', async (req, res, next) => {
+router.get('/random/korea', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.noapikey)
         if(listkey.includes(apikey)){
@@ -189,7 +208,7 @@ router.get('/cecan/korea', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/cecan/japan', async (req, res, next) => {
+router.get('/random/japan', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.noapikey)
         if(listkey.includes(apikey)){
@@ -208,7 +227,7 @@ router.get('/cecan/japan', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/cecan/malaysia', async (req, res, next) => {
+router.get('/random/malaysia', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.noapikey)
         if(listkey.includes(apikey)){
